@@ -1,0 +1,470 @@
+/* font-family: 'Playfair Display', serif;
+font-family: 'Poppins', sans-serif; */
+
+:root {
+  --cream: #d1c0ae;
+  --white: #ffffff;
+  --black: #131313;
+  --gray1: #222222;
+  --gray2: #555555;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.dark-mode {
+  --bg: var(--gray1);
+  --text: var(--white);
+  --bg-notif: var(--gray1);
+  --bg-btn: var(--white);
+  --text-btn: var(--black);
+  --border-ghost-btn: var(--white);
+  --text-ghost-btn: var(--white);
+  --bg-input: var(--gray2);
+  --bg-header: url("../imgs/loft-space-empty-room-with-tv-cabinet-dark-concrete-interior-background-3d-rendering.jpg");
+}
+
+.light-mode {
+  --bg: var(--white);
+  --text: var(--black);
+  --bg-notif: var(--cream);
+  --bg-btn: var(--black);
+  --text-btn: var(--white);
+  --border-ghost-btn: var(--black);
+  --text-ghost-btn: var(--black);
+  --bg-input: var(--white);
+  --bg-header: url("../imgs/simple-minimal-cabinet-tv-interior-wall-mockup-3d-rendering.jpg");
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--text);
+  font-size: 14px;
+  background: var(--bg);
+}
+
+/* Notification */
+.notification {
+  width: 100%;
+  background-color: var(--bg-notif);
+  text-align: center;
+  font-weight: 600;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+/* Navbar */
+.section-1 {
+  height: 100vh;
+  background: #c2bcae;
+  background-image: var(--bg-header);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.navbar {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.left-navbar {
+  display: flex;
+  align-items: center;
+}
+
+.left-navbar .logo {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -2px;
+  margin-top: -10px;
+}
+
+.menus {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu-item {
+  margin-left: 20px;
+}
+
+.menu-item a {
+  text-decoration: none;
+  color: var(--black);
+  font-weight: 600;
+}
+
+.menu-item.cart-counter {
+  border: 1px solid var(--black);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+}
+
+.right-menu {
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.text-container {
+  min-height: 70vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-container h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 64px;
+  opacity: 1;
+
+  animation-name: textAnimation;
+  animation-duration: 1000ms;
+  animation-timing-function: ease-out;
+}
+
+.text-container p {
+  font-weight: 500;
+  margin: 20px 0;
+
+  opacity: 0;
+
+  animation-name: text2Animation;
+  animation-duration: 1000ms;
+  animation-delay: 200ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+.text-container button {
+  border: 1px solid var(--border-ghost-btn);
+  color:var(--text-ghost-btn);
+  background-color: transparent;
+  padding: 10px 24px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+
+  opacity: 0;
+
+  animation-name: buttonAnimation;
+  animation-duration: 1800ms;
+  animation-delay: 500ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+/* section 2*/
+.section-2 {
+  padding-top: 30px;
+}
+
+.products h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.showcase {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.showcase-item {
+  font-weight: 600;
+  width: 320px;
+}
+
+.showcase-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.showcase-item.potrait {
+  margin: 0 10px;
+}
+
+.showcase-item.potrait img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+.footer {
+  background-color: var(--black);
+  color: var(--white);
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.mobile-menu button {
+  all: unset;
+}
+
+/* .mobile-menu button:focus-within {
+  
+} */
+
+.mobile-menu img {
+  width: 40px;
+}
+
+/* Section 3 */
+.section-3 {
+  padding: 30px 0;
+}
+
+.contact h2 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.contact-form {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.form-group input {
+  height: 32px;
+  padding-left: 8px;
+  border: 1px solid #adadad;
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  background-color: var(--bg-input);
+  color: var(--text);
+}
+
+.form-group input:focus-visible {
+  border: 1.5px solid var(--cream);
+  outline: none;
+}
+
+.form-group textarea {
+  padding-left: 8px;
+  padding-top: 4px;
+  border: 1px solid #adadad;
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  background-color: var(--bg-input);
+  color: var(--text);
+}
+
+.form-group textarea:focus-visible {
+  border: 1.5px solid var(--cream);
+  outline: none;
+}
+
+.contact-form button {
+  border: none;
+  background-color: var(--bg-btn);
+  color: var(--text-btn);
+  padding: 10px 24px;
+  font-family: "Poppins", sans-serif;
+
+  /* font-weight: 600; */
+}
+
+.close {
+  display: none;
+}
+
+.video-item{
+  width: 100%;
+  height: 250px;
+}
+
+@media screen and (max-width: 768px) {
+  .showcase {
+    flex-direction: column;
+  }
+
+  .showcase-item {
+    width: 100%;
+  }
+
+  .showcase-item img {
+    width: 100%;
+  }
+
+  .showcase-item.potrait img {
+    width: 100%;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .menus {
+    background-color: var(--bg-notif);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 50vw;
+    z-index: 20;
+  }
+
+  .left-menu {
+    display: block;
+    text-align: center;
+  }
+  .right-menu {
+    text-align: center;
+    display: block;
+  }
+
+  .menu-item.cart-counter {
+    margin: 0 auto 40px auto;
+    border-color: var(--text);
+  }
+
+  .menu-item {
+    margin: 0;
+    margin-bottom: 40px;
+  }
+
+  .menu-item a {
+    color: var(--text);
+  }
+
+  .close {
+    display: block;
+  }
+}
+
+/* floating button */
+.floating-button {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+}
+
+.floating-button button {
+  all: unset;
+  background: var(--white);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.floating-button button img {
+  width: 100%;
+}
+
+@media screen and (max-width: 425px) {
+  .text-container h1 {
+    font-size: 42px;
+  }
+
+  .products h2 {
+    font-size: 24px;
+    margin: 50px 0;
+  }
+
+  .showcase-container {
+    width: 100%;
+    overflow: scroll;
+  }
+
+  .showcase {
+    display: block;
+    width: max-content;
+  }
+
+  .showcase-item {
+    display: inline-block;
+    width: 200px;
+  }
+
+  .showcase-item.potrait {
+    display: inline-block;
+    width: 200px;
+  }
+
+  .showcase-item.potrait img {
+    height: 150px;
+  }
+
+  .showcase-item img {
+    height: 150px;
+  }
+}
+
+
+
+@keyframes textAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes text2Animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes buttonAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
